@@ -8,7 +8,7 @@ namespace ClassWork2016_10_10
     {
         public static void StartExample()
         {
-            SortedList<string, int> listCount=new SortedList<string, int>();
+            SortedList<string, int> listCount = new SortedList<string, int>();
             try
             {
                 StreamReader sr = new StreamReader(new FileStream("words.txt", FileMode.Open, FileAccess.Read));
@@ -19,7 +19,7 @@ namespace ClassWork2016_10_10
                 while (!sr.EndOfStream)
                 {
                     line = sr.ReadLine();
-                    list.AddRange(line.Split(new char[] {' ', ',', '.', ':', '!', '?'}, StringSplitOptions.RemoveEmptyEntries));
+                    list.AddRange(line.Split(new char[] { ' ', ',', '.', ':', '!', '?' }, StringSplitOptions.RemoveEmptyEntries));
                 }
                 sr.Close();
 
