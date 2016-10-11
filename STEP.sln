@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "Singleton\Sing
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{4BC705EE-FB2F-4E84-995A-BD5E41B9AD75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Object", "Object\Object.csproj", "{86E02769-E976-4655-B661-72E3D16EEEB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -31,6 +33,10 @@ Global
 		{4BC705EE-FB2F-4E84-995A-BD5E41B9AD75}.Debug|x86.Build.0 = Debug|x86
 		{4BC705EE-FB2F-4E84-995A-BD5E41B9AD75}.Release|x86.ActiveCfg = Release|x86
 		{4BC705EE-FB2F-4E84-995A-BD5E41B9AD75}.Release|x86.Build.0 = Release|x86
+		{86E02769-E976-4655-B661-72E3D16EEEB0}.Debug|x86.ActiveCfg = Debug|x86
+		{86E02769-E976-4655-B661-72E3D16EEEB0}.Debug|x86.Build.0 = Debug|x86
+		{86E02769-E976-4655-B661-72E3D16EEEB0}.Release|x86.ActiveCfg = Release|x86
+		{86E02769-E976-4655-B661-72E3D16EEEB0}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
