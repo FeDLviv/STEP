@@ -1,87 +1,92 @@
 ﻿using System;
-using System.Text;
 using System.IO;
+using System.Text;
 
-//C# System.IO
-namespace ClassWork2016_10_10
+namespace IO
 {
+    /// Клас для тестування IO в C#
     class Program
     {
         static void Main(string[] args)
         {
-            //C# System
-            //0. Objects, MarshalByRefObjects
-            //C# System.IO
-            //1. Stream (FileStream, MemoryStream, BufferedStream)
-            //2. TextReader (StreamReader, StringReader), TextWriter (StreamWriter, StringWriter), BinaryReader, BinaryWriter
-            //3. FileSystemInfo (FileInfo, DirectoryInfo), Path, File, Directory
+            Console.WriteLine("***FILE STREAM***");//читає байти
+            FileStream file1 = new FileStream(@"ASCII.txt", FileMode.Open, FileAccess.Read);
+            for (int i = 0; i < file1.Length; i++)
+            {
+                Console.Write((char)file1.ReadByte());
+            }
+            Console.WriteLine();
+            FileStream file2 = new FileStream(@"UTF-8.txt", FileMode.Open, FileAccess.Read);
+            for (int i = 0; i < file2.Length; i++)
+            {
+                Console.Write((char)file2.ReadByte());
+            }
+            Console.WriteLine();
+            FileStream file3 = new FileStream(@"Unicode.txt", FileMode.Open, FileAccess.Read);
+            for (int i = 0; i < file3.Length; i++)
+            {
+                Console.Write((char)file3.ReadByte());
+            }
+            Console.WriteLine("\n\n");
 
-            const string PATH_TO_FILE = @"data.txt";
+            Console.WriteLine("***ENCODING***");
+            file1.Seek(0, SeekOrigin.Begin);
+            Byte[] buff1 = new Byte[file1.Length];
+            file1.Read(buff1, 0, (int)file1.Length);
+            Console.WriteLine(Encoding.UTF8.GetString(buff1));
+            file2.Seek(0, SeekOrigin.Begin);
+            Byte[] buff2 = new Byte[file2.Length];
+            file2.Read(buff2, 0, (int)file2.Length);
+            Console.WriteLine(Encoding.ASCII.GetString(buff2));
+            file3.Seek(0, SeekOrigin.Begin);
+            Byte[] buff3 = new Byte[file2.Length];
+            file3.Read(buff3, 0, (int)file2.Length);
+            Console.WriteLine(Encoding.Unicode.GetString(buff3));
+            Console.WriteLine("\n\n");
 
-            MemoryStream mStr=new MemoryStream();
-            byte[] buff = Encoding.UTF8.GetBytes(Console.ReadLine());
-            mStr.Write(buff, 0, buff.Length);
-            FileStream fStr = new FileStream(PATH_TO_FILE, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
-            mStr.WriteTo(fStr);
-            fStr.Close();
+            Console.WriteLine("***STREAM READER***");//читає символи
+            StreamReader reader1 = new StreamReader(@"ASCII.txt");
+            Console.WriteLine(reader1.ReadToEnd());
+            StreamReader reader2 = new StreamReader(@"UTF-8.txt");
+            Console.WriteLine(reader2.ReadToEnd());
+            StreamReader reader3 = new StreamReader(@"Unicode.txt");
+            Console.WriteLine(reader3.ReadToEnd());
+            Console.WriteLine("\n\n");
 
-            StreamReader strRed = new StreamReader(PATH_TO_FILE);
-            string text=strRed.ReadToEnd();
-            
-            StringReader stringR = new StringReader(text);
-            Console.WriteLine(stringR.ReadLine());
-
-            //(StreamWriter, StringWriter), BinaryReader, BinaryWriter
-            //(FileInfo, DirectoryInfo), Path, File, Directory
-          
-
-
-
-
-
-            //Stream fstr = new FileStream(@"text.txt", FileMode.Create, FileAccess.ReadWrite, FileShare.None);
-
-            //Console.WriteLine("***MEMORYSTREAM***");
-            ////потік в пам'яті
-            //MemoryStream memStr = new MemoryStream();
-            //Console.WriteLine("CAPACITY={0}", memStr.Capacity);
-
-            ////з консолі в потік MemoryStream
-            //byte[] buff = Encoding.Unicode.GetBytes(Console.ReadLine());
-            //memStr.Write(buff, 0, buff.Length);
-            //Console.WriteLine("CAPACITY={0}", memStr.Capacity);
-
-            ////записати в масив дані з потоку MemoryStream
-            //byte[] arr = memStr.ToArray();
-
-            ////записати в файл дані з MemoryStream
-            //FileStream file = new FileStream("text.txt", FileMode.Create);
-            //memStr.WriteTo(file);
-
-            //Console.WriteLine("***STRINGWRITER/STRINGREADER***");
-            //StringWriter sw = new StringWriter();
-            //sw.WriteLine("This text: {0}", 1);
-            //Console.WriteLine("Generate string: {0}", sw.ToString());
-
-            //StringReader sr = new StringReader("text");
-
-
-            //Console.WriteLine("***BINARYREADER/BINARYWRITER***");
-            ////бінарні потоки
-            //FileStream f = new FileStream("bin.dat", FileMode.Create, FileAccess.Write);
-            //BinaryWriter bw = new BinaryWriter(f);
-            ////запис в файл bin.dat - int
-            //bw.Write(1985);
-            ////запис в файл bin.dat - string
-            //bw.Write("hello");
-            //bw.Close();
-
-            //BinaryReader bt = new BinaryReader(new FileStream("bin.dat", FileMode.Open, FileAccess.Read));
-            //Console.WriteLine(bt.ReadInt32());
-            //Console.WriteLine(bt.ReadString());
-
-            //Console.WriteLine("***EXAMPLE***");
-            //Example.StartExample();
+            Console.WriteLine("***FILE STREAM WRITER***");
+            FileStream fs1 = new FileStream(@"D:\FWASCII.txt", FileMode.Create, FileAccess.Write);
+            StreamWriter sw1 = new StreamWriter(fs1);
+            sw1.WriteLine("FW");
+            sw1.WriteLine("ASCII");
+            sw1.WriteLine("Кириллица");
+            sw1.Close();
+            fs1 = new FileStream(@"D:\FWASCII.txt", FileMode.Open, FileAccess.Read);
+            for (int i = 0; i < fs1.Length; i++)
+            {
+                Console.Write((char)fs1.ReadByte());
+            }
+            FileStream fs2 = new FileStream(@"D:\FWUTF-8.txt", FileMode.Create, FileAccess.Write);
+            StreamWriter sw2 = new StreamWriter(fs2);
+            sw2.WriteLine("FW");
+            sw2.WriteLine("UTF-8");
+            sw2.WriteLine("Кириллица");
+            sw2.Close();
+            fs2 = new FileStream(@"D:\FWUTF-8.txt", FileMode.Open, FileAccess.Read);
+            for (int i = 0; i < fs2.Length; i++)
+            {
+                Console.Write((char)fs2.ReadByte());
+            }
+            FileStream fs3 = new FileStream(@"D:\FWUnicode.txt", FileMode.Create, FileAccess.Write);
+            StreamWriter sw3 = new StreamWriter(fs3);
+            sw3.WriteLine("FW");
+            sw3.WriteLine("Unicode");
+            sw3.WriteLine("Кириллица");
+            sw3.Close();
+            fs3 = new FileStream(@"D:\FWUnicode.txt", FileMode.Open, FileAccess.Read);
+            for (int i = 0; i < fs3.Length; i++)
+            {
+                Console.Write((char)fs3.ReadByte());
+            }
         }
     }
 }
