@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C# Express 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassWork2016-10-10", "ClassWork2016-10-10\ClassWork2016-10-10.csproj", "{6E6017B7-30FC-44D4-8518-90BC0376E96C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassWork2016-10-11", "ClassWork2016-10-11\ClassWork2016-10-11.csproj", "{38CD9051-C358-4DAB-AC54-44BD72CA29B7}"
@@ -18,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{4BC705EE-FB2F-4E84-995A-BD5E41B9AD75}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attribute", "Attribute\Attribute.csproj", "{5C7E6B61-940F-44FB-9051-74027ABE323E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassWork2016-10-13", "ClassWork2016-10-13\ClassWork2016-10-13.csproj", "{428C49AE-4657-4CD2-85C0-E1E761AD825A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -119,6 +123,18 @@ Global
 		{5C7E6B61-940F-44FB-9051-74027ABE323E}.Release|Mixed Platforms.Build.0 = Release|x86
 		{5C7E6B61-940F-44FB-9051-74027ABE323E}.Release|x86.ActiveCfg = Release|x86
 		{5C7E6B61-940F-44FB-9051-74027ABE323E}.Release|x86.Build.0 = Release|x86
+		{428C49AE-4657-4CD2-85C0-E1E761AD825A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{428C49AE-4657-4CD2-85C0-E1E761AD825A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{428C49AE-4657-4CD2-85C0-E1E761AD825A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{428C49AE-4657-4CD2-85C0-E1E761AD825A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{428C49AE-4657-4CD2-85C0-E1E761AD825A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{428C49AE-4657-4CD2-85C0-E1E761AD825A}.Debug|x86.Build.0 = Debug|Any CPU
+		{428C49AE-4657-4CD2-85C0-E1E761AD825A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{428C49AE-4657-4CD2-85C0-E1E761AD825A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{428C49AE-4657-4CD2-85C0-E1E761AD825A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{428C49AE-4657-4CD2-85C0-E1E761AD825A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{428C49AE-4657-4CD2-85C0-E1E761AD825A}.Release|x86.ActiveCfg = Release|Any CPU
+		{428C49AE-4657-4CD2-85C0-E1E761AD825A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
