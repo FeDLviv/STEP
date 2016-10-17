@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C# Express 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassWork2016-10-10", "ClassWork2016-10-10\ClassWork2016-10-10.csproj", "{6E6017B7-30FC-44D4-8518-90BC0376E96C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassWork2016-10-11", "ClassWork2016-10-11\ClassWork2016-10-11.csproj", "{38CD9051-C358-4DAB-AC54-44BD72CA29B7}"
@@ -24,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serialization", "Serialization\Serialization.csproj", "{63BB12DD-7C61-481B-95DE-813F891CB1AC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "Linq\Linq.csproj", "{739A0181-88BD-4277-99EC-A2B425A4715E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassWork2016-10-17", "ClassWork2016-10-17\ClassWork2016-10-17.csproj", "{B8241644-3031-4CAF-A92B-19938D5BD49C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -155,6 +159,18 @@ Global
 		{739A0181-88BD-4277-99EC-A2B425A4715E}.Release|Mixed Platforms.Build.0 = Release|x86
 		{739A0181-88BD-4277-99EC-A2B425A4715E}.Release|x86.ActiveCfg = Release|x86
 		{739A0181-88BD-4277-99EC-A2B425A4715E}.Release|x86.Build.0 = Release|x86
+		{B8241644-3031-4CAF-A92B-19938D5BD49C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8241644-3031-4CAF-A92B-19938D5BD49C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8241644-3031-4CAF-A92B-19938D5BD49C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B8241644-3031-4CAF-A92B-19938D5BD49C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B8241644-3031-4CAF-A92B-19938D5BD49C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B8241644-3031-4CAF-A92B-19938D5BD49C}.Debug|x86.Build.0 = Debug|Any CPU
+		{B8241644-3031-4CAF-A92B-19938D5BD49C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8241644-3031-4CAF-A92B-19938D5BD49C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8241644-3031-4CAF-A92B-19938D5BD49C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B8241644-3031-4CAF-A92B-19938D5BD49C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B8241644-3031-4CAF-A92B-19938D5BD49C}.Release|x86.ActiveCfg = Release|Any CPU
+		{B8241644-3031-4CAF-A92B-19938D5BD49C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

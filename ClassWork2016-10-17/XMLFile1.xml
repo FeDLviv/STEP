@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<!-- коментарі-->
+<students>
+  
+  <student id="1">
+    <name>Fedir</name>
+    <rate>10</rate>
+    <group>s25-vp1</group>
+    <birthday>
+      <day>23</day>
+      <month>8</month>
+      <year>1985</year>
+    </birthday>
+  </student>
+  
+  <student id="2">
+    <name>Danil</name>
+    <rate>11</rate>
+    <group>s25-vp1</group>
+    <birthday>
+      <day>12</day>
+      <month>8</month>
+      <year>1990</year>
+    </birthday>
+  </student>
+
+</students>
