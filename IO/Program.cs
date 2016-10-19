@@ -8,6 +8,7 @@ namespace ClassWork2016_10_10
     class Program
     {
         static void Main(string[] args)
+
         {
             //C# System
             //0. Objects, MarshalByRefObjects
