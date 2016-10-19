@@ -10,12 +10,20 @@ namespace ClassWork2016_10_18
         //XPathLanguage
         static void Main(string[] args)
         {
+            const string PROXY_IP = "192.168.1.4";
+            const int PROXY_PORT = 3128;
+            const string PROXY_USER = "boss";
+            const string PROXY_PASSWORD = "393735ws";
             const string URL= "https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5";
             string XML;
                         
             //завантажуєм дані з ресурса (URL)           
             using (WebClient web = new WebClient())
             {
+                
+                WebProxy proxy = new WebProxy(PROXY_IP, PROXY_PORT);
+                proxy.Credentials = new NetworkCredential(PROXY_USER, PROXY_PASSWORD);
+                web.Proxy = proxy;           
                 XML = web.DownloadString(URL);
             }
             
