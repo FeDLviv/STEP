@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Text;
 using System.Reflection;
-using NLog;
 
 namespace ClassWork2016_10_20
 {
@@ -68,9 +67,6 @@ namespace ClassWork2016_10_20
             Type t = asem.GetType("My.Asd");
             //ще один варіант для створення екземпляра класа
             object ob = Activator.CreateInstance(t);
-
-            Logger log = LogManager.GetCurrentClassLogger();
-            log.Debug("приклад");
         }
     }
 
